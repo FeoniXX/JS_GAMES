@@ -13,7 +13,7 @@ But the game is more difficult because the user experience is very demanding.
 
 Here are some special effects and games I've written recently.
 
-#### Cellular Automata
+#### [games] Cellular Automata
 * [Online Preview](https://www.feonix.cn/cell/)
 * [View Code](https://gitee.com/demo./js_games/tree/master/cell)
 
