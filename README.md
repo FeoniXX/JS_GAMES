@@ -1,39 +1,28 @@
-# JS_GAMES
+# JS-特效-小游戏集合
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+```
+我做web开发很多年了，主要是后端，前端也会一些
+从前看到那些会写特效和游戏的前端
+我很羡慕
 
-#### 软件架构
-软件架构说明
+最近抽空仔细学习了前端知识，开始写一些练手的小游戏
+其实写游戏和写普通的项目没有什么区别
+无非就是调接口, 面向对象, 算法, 设计模式
+但游戏更难一些, 因为用户体验要求很高
+```
 
+以下是我最近写的一些特效和游戏
 
-#### 安装教程
+#### [小游戏] 元胞自动机
+* [在线预览](https://www.feonix.cn/cell/)
+* [查看代码](https://gitee.com/demo./js_games/tree/master/cell)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### [小游戏] 贪吃蛇
+* [在线预览](https://www.feonix.cn/snake/)
+* [查看代码](https://gitee.com/demo./js_games/tree/master/snake)
 
-#### 使用说明
+#### [小游戏] 2048
+* [在线预览](https://www.feonix.cn/2048/)
+* [查看代码](https://gitee.com/demo./js_games/tree/master/2048)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+未完待续...
