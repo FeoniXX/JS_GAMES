@@ -1,36 +1,28 @@
-# JS_GAMES
+# JS - special effects - Games Collection
 
-#### Description
-{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
+```
+I have been doing web development for many years, mainly in the back end and front end.
+I used to see front ends that could write special effects and games.
+I envy it.
 
-#### Software Architecture
-Software architecture description
+Recently, I took time to study the front-end knowledge carefully and began to write some small games for hands-on training.
+In fact, there is no difference between writing games and ordinary projects.
+It's just interface, object-oriented, algorithm, design pattern.
+But the game is more difficult because the user experience is very demanding.
+```
 
-#### Installation
+Here are some special effects and games I've written recently.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### Cellular Automata
+* [Online Preview](https://www.feonix.cn/cell/)
+* [View Code](https://gitee.com/demo./js_games/tree/master/cell)
 
-#### Instructions
+#### [games] Snake
+* [Online Preview](https://www.feonix.cn/snake/ )
+* [View Code](https://gitee.com/demo./js_games/tree/master/snake)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### [games] 2048
+* [Online Preview](https://www.feonix.cn/2048/ )
+* [View Code](https://gitee.com/demo./js_games/tree/master/2048)
 
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+To be continued...
