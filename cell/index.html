@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>元胞自动机</title>
+	<style>
+		body {
+			background: #fff;
+			overflow: hidden;
+		}
+
+		canvas {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.toolbox {
+			position: absolute;
+			top: 20px;
+			left: 420px;
+		}
+
+		.toolbox button {
+			display: block;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="canvas"></canvas>
+	<div class="toolbox">
+		<button id="btn-start">START</button>
+		<button id="btn-reset">RESET</button>
+	</div>
+</body>
+<script src="cell.js"></script>
+<script src="index.js"></script>
+</html>
