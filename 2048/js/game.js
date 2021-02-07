@@ -93,7 +93,7 @@
             }
         },
         // 更新分数显示
-        updateScore() {
+        updateScore: function () {
             $('#score').innerText = this.score;
         },
         // 判断游戏结束

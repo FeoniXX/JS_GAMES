@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>贪吃蛇</title>
-    <style>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>贪吃蛇</title>
+	<style>
 		* {
 			margin: 0;
 			padding: 0;
@@ -26,12 +27,12 @@
 		}
 
 		.container {
-			width: 480px;
-			height: 530px;
+			width: 800px;
+			height: 550px;
 			position: absolute;
 			top: 20px;
 			left: 50%;
-			margin-left: -240px;
+			margin-left: -400px;
 		}
 
 		.container .header {
@@ -47,27 +48,30 @@
 		}
 
 		#canvas {
-			width: 480px;
-			height: 480px;
-			background-color: #bbada0;
-			border-radius: 10px;
+			width: 800px;
+			height: 500px;
+			background-color: #ffffff;
+			border-radius: 5px;
+			border: 1px solid orange;
 		}
 
-		#game-over {
+		#game-over,
+		#game-pause {
 			display: none;
 			position: absolute;
 			left: 50%;
-			top: 50px;
-			width: 480px;
-			height: 480px;
-			border-radius: 10px;
+			top: 23px;
+			width: 800px;
+			height: 500px;
+			border-radius: 5px;
 			background-color: rgba(0, 0, 0, .6);
-			margin-left: -240px;
+			margin-left: -399px;
 			text-align: center;
 			z-index: 5;
 		}
 
-		#game-over .panel {
+		#game-over .panel,
+		#game-pause .panel {
 			position: absolute;
 			left: 50%;
 			right: 50%;
@@ -81,7 +85,8 @@
 			z-index: 6;
 		}
 
-		#again {
+		#again,
+		#continue {
 			display: inline-block;
 			width: 170px;
 			height: 50px;
@@ -93,20 +98,32 @@
 		}
 	</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="score-panel left">
-            <span>SCORE: </span>
-            <span id="score">0</span>
-        </div>
-        <canvas id="map"></canvas>
-        <div id="game-over">
+	<div class="container">
+		<div class="score-panel left">
+			<span>SCORE: </span>
+			<span id="score">0</span>
+		</div>
+		<canvas id="canvas" width="800" height="500"></canvas>
+		<div id="game-over">
 			<div class="panel">
 				<h1 id="state" style="margin-top: 5px;"></h1>
 				<a href="javascript:;" id="again">Try again</a>
 			</div>
 		</div>
-		<div>TIP: 通过键盘↑ ↓ ← → 键操作</div>
-    </div>
+		<div id="game-pause">
+			<div class="panel">
+				<h1 id="state" style="margin: 35px 0;color:orange;">PAUSED</h1>
+				<a href="javascript:;" id="continue">Continue</a>
+			</div>
+		</div>
+		<div>TIP: 通过键盘↑ ↓ ← → 键操作蛇移动，space键切换暂停</div>
+	</div>
 </body>
+<script src="./js/util.js"></script>
+<script src="./js/food.js"></script>
+<script src="./js/snake.js"></script>
+<script src="./js/game.js"></script>
+
 </html>
