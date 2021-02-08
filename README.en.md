@@ -25,4 +25,8 @@ Here are some special effects and games I've written recently.
 * [Online Preview](https://www.feonix.cn/2048/ )
 * [View Code](https://gitee.com/demo./js_games/tree/master/2048)
 
+#### [games] Tetris
+* [Online Preview](https://www.feonix.cn/tetris/ )
+* [View Code](https://gitee.com/demo./js_games/tree/master/tetris)
+
 To be continued...

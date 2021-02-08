@@ -25,4 +25,8 @@
 * [在线预览](https://www.feonix.cn/2048/)
 * [查看代码](https://gitee.com/demo./js_games/tree/master/2048)
 
+#### [小游戏] 俄罗斯方块
+* [在线预览](https://www.feonix.cn/tetris/)
+* [查看代码](https://gitee.com/demo./js_games/tree/master/tetris)
+
 未完待续...
