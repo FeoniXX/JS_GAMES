@@ -21,7 +21,7 @@
 			// 所有的块
 			this.matrix = generatorMatrix();
 			this.timer = null;
-			this.currentSquare = null;
+			this.currentBlock = null;
 			this.blockFactory = BlockFactory;
 			this.score = 0;
 			this.isOver = false;
@@ -36,10 +36,10 @@
 			var tempMatrix = deepCopyMatrix(matrix)
 
 			// 合并到 matrix
-			if (this.currentSquare) {
-				const x = this.currentSquare.x;
-				const y = this.currentSquare.y;
-				const data = this.currentSquare.data;
+			if (this.currentBlock) {
+				const x = this.currentBlock.x;
+				const y = this.currentBlock.y;
+				const data = this.currentBlock.data;
 				var child = {
 					row: y,
 					col: x - 2,
@@ -67,8 +67,8 @@
 			}
 		},
 		// 生成方块
-		generatorSquare: function () {
-			this.currentSquare = this.blockFactory.rand();
+		generatorBlock: function () {
+			this.currentBlock = this.blockFactory.rand();
 			this.fastMoveDown(false);
 		},
 		// 消除所有已经满一行的方块
@@ -88,9 +88,9 @@
 		},
 		// 当前方块与矩阵合并
 		checkMerge: function () {
-			const x = this.currentSquare.x;
-			const y = this.currentSquare.y;
-			const data = this.currentSquare.data;
+			const x = this.currentBlock.x;
+			const y = this.currentBlock.y;
+			const data = this.currentBlock.data;
 			var tempMatrix = deepCopyMatrix(this.matrix);
 			// 到底了
 			if (y + data.length === tempMatrix.length) {
@@ -110,9 +110,9 @@
 		},
 		// 合并当前方块
 		merge: function () {
-			const x = this.currentSquare.x;
-			const y = this.currentSquare.y;
-			const data = this.currentSquare.data;
+			const x = this.currentBlock.x;
+			const y = this.currentBlock.y;
+			const data = this.currentBlock.data;
 			var child = {
 				row: y,
 				col: x - 2,
@@ -121,30 +121,6 @@
 			this.matrix = mergeMatrix(child, this.matrix)
 			// 找到并消除一行
 			this.fullLine();
-		},
-		// 旋转方块
-		rotate: function (keyCode) {
-			if ([37, 39, 32, 40].indexOf(keyCode) !== -1) {
-				switch (keyCode) {
-					// 左
-					case 37:
-						this.currentSquare.move(-1, this.matrix);
-						break;
-					// 右
-					case 39:
-						this.currentSquare.move(1, this.matrix);
-						break;
-					// 空格
-					case 32:
-						this.currentSquare.rotate(this.matrix);
-						break;
-					// 下
-					case 40:
-						this.fastMoveDown(false);
-						break;
-				}
-				this.draw();
-			}
 		},
 		// 快速下降
 		fastMoveDown: function (isFast) {
@@ -167,20 +143,38 @@
 				if (self.isOver) {
 					return false;
 				}
-				self.rotate(e.keyCode);
+				// space key up
+				if (e.keyCode === 32) {
+					self.currentBlock.rotate(self.matrix);
+					self.draw();
+				}
+				// down key up
+				if (e.keyCode === 40) {
+					self.fastMoveDown(false);
+				}
 			});
 			doc.addEventListener('keydown', function (e) {
 				if (self.isOver) {
 					return false;
 				}
-				// 按下下键，快速下降
+				// down key down
 				if (self.fast === false && e.keyCode === 40) {
 					self.fastMoveDown(true);
+				}
+				// left key down
+				if (e.keyCode === 37) {
+					self.currentBlock.move(-1, self.matrix);
+					self.draw();
+				}
+				// right key down
+				if (e.keyCode === 39) {
+					self.currentBlock.move(1, self.matrix);
+					self.draw();
 				}
 			});
 		},
 		start: function () {
-			this.generatorSquare();
+			this.generatorBlock();
 			// 绘制所有方块
 			this.draw();
 			// 游戏主逻辑
@@ -197,10 +191,10 @@
 					// 合并
 					this.merge();
 					// 生成新的一行
-					this.generatorSquare();
+					this.generatorBlock();
 				} else {
 					// 格子下落
-					this.currentSquare.down();
+					this.currentBlock.down();
 				}
 			} else {
 				// game over
