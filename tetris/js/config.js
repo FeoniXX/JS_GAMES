@@ -1,6 +1,6 @@
 /*---------------方块----------------*/
-// 正向的L
-const blockL1 = [
+// L型方块
+const blockL = [
     [
         [0, 0, 1],
         [1, 1, 1]
@@ -21,8 +21,8 @@ const blockL1 = [
     ]
 ];
 
-// 反向的L
-const blockL2 = [
+// J型方块
+const blockJ = [
     [
         [1, 0, 0],
         [1, 1, 1]
@@ -43,8 +43,8 @@ const blockL2 = [
     ]
 ];
 
-// 一字型
-const block__ = [
+// I型方块
+const blockI = [
     [
         [1, 1, 1, 1]
     ],
@@ -65,8 +65,8 @@ const block__ = [
     ]
 ];
 
-// 四方块
-const blockSquare = [
+// O型方块
+const blockO = [
     [
         [1, 1],
         [1, 1]
@@ -85,8 +85,8 @@ const blockSquare = [
     ],
 ];
 
-// 正向的Z
-const blockZ1 = [
+// Z型方块
+const blockZ = [
     [
         [1, 1, 0],
         [0, 1, 1]
@@ -107,8 +107,8 @@ const blockZ1 = [
     ]
 ];
 
-// 反向的Z
-const blockZ2 = [
+// S型方块
+const blockS = [
     [
         [0, 1, 1],
         [1, 1, 0]
@@ -129,7 +129,7 @@ const blockZ2 = [
     ]
 ];
 
-// T字形
+// T型方块
 const blockT = [
     [
         [1, 1, 1],

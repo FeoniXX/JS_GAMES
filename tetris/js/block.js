@@ -4,7 +4,7 @@
 	const Block = function (roates) {
 		this.x = COLS / 2;
 		this.y = 0;
-		this.roates = roates || blockL1;
+		this.roates = roates || blockL;
 		this.dir = 0;
 		this.data = this.roates[this.dir];
 	}
@@ -32,13 +32,13 @@
 			this.data = this.roates[this.dir];
 		},
 		// 是否两侧越界
-		isContactBorder: function (matrix, direction) {
+		isContactBorder: function (matrix, dir) {
 			for (var row = 0; row < matrix.length; row++) {
-				if (direction === 'left') {
+				if (dir === 'left') {
 					if (matrix[row][0] === 1) {
 						return true;
 					}
-				} else if (direction === 'right') {
+				} else if (dir === 'right') {
 					if (matrix[row][COLS - 1] === 1) {
 						return true;
 					}
@@ -51,7 +51,7 @@
 			return matrix[x][y] === 1;
 		},
 		// 碰撞检查
-		Collision: function (matrix, child, direction) {
+		Collision: function (matrix, child, dir) {
 			const row = child.row;
 			const col = child.col;
 			const arr = child.arr;
@@ -63,8 +63,8 @@
 							x: x + row,
 							y: y + col
 						};
-						if (direction === 'right' || direction === 'left') {
-							pos.y = y + col + (direction === 'right' ? 1 : -1);
+						if (dir === 'right' || dir === 'left') {
+							pos.y = y + col + (dir === 'right' ? 1 : -1);
 						}
 						if (this.checkMatrix(matrix, pos)) {
 							return true;
@@ -100,25 +100,25 @@
 
 	// 方块工厂对象，创建方块
 	const BlockFactory = {
-		blockTypes: ['L1', 'L2', '__', 'Square', 'Z1', 'Z2', 'T'],
+		blockTypes: ['L', 'J', 'I', 'O', 'Z', 'S', 'T'],
 		create: function (type) {
 			switch (type) {
-				case 'L1':
-					return new Block(blockL1);
-				case 'L2':
-					return new Block(blockL2);
-				case '__':
-					return new Block(block__);
-				case 'Square':
-					return new Block(blockSquare);
-				case 'Z1':
-					return new Block(blockZ1);
-				case 'Z2':
-					return new Block(blockZ2);
+				case 'L':
+					return new Block(blockL);
+				case 'J':
+					return new Block(blockJ);
+				case 'I':
+					return new Block(blockI);
+				case 'O':
+					return new Block(blockO);
+				case 'Z':
+					return new Block(blockZ);
+				case 'S':
+					return new Block(blockS);
 				case 'T':
 					return new Block(blockT);
 				default:
-					return new Block(blockL1);
+					return new Block(blockL);
 			}
 		},
 		rand: function () {
