@@ -33,4 +33,8 @@
 * [在线预览](https://www.feonix.cn/particle-animation/)
 * [查看代码](https://gitee.com/demo./js_games/tree/master/particle-animation)
 
+#### [特效] 鼠标移动炫彩小球
+* [在线预览](https://www.feonix.cn/globule/)
+* [查看代码](https://gitee.com/demo./js_games/tree/master/globule)
+
 未完待续...
