@@ -29,4 +29,8 @@
 * [在线预览](https://www.feonix.cn/tetris/)
 * [查看代码](https://gitee.com/demo./js_games/tree/master/tetris)
 
+#### [特效] 动态粒子效果背景
+* [在线预览](https://www.feonix.cn/particle-animation/)
+* [查看代码](https://gitee.com/demo./js_games/tree/master/particle-animation)
+
 未完待续...
