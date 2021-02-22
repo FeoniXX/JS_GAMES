@@ -25,6 +25,8 @@
 			this.blockFactory = BlockFactory;
 			this.score = 0;
 			this.isOver = false;
+
+			$('#score').innerText = this.score;
 		},
 		// 重绘所有的已经确定的方块
 		draw: function () {
