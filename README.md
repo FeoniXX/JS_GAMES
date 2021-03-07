@@ -33,6 +33,10 @@
 * [在线预览](https://www.feonix.cn/blockTank/)
 * [查看代码](https://gitee.com/demo./js_games/tree/master/blockTank)
 
+#### [小游戏] 农场小游戏
+* [在线预览](https://www.feonix.cn/farm/)
+* [查看代码](https://gitee.com/demo./js_games/tree/master/farm)
+
 #### [特效] 动态粒子效果背景
 * [在线预览](https://www.feonix.cn/particle-animation/)
 * [查看代码](https://gitee.com/demo./js_games/tree/master/particle-animation)
