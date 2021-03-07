@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>农场小游戏</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<div id="main" class="container">
+		<div class="header clear-fixed">
+			<div id="nickname" class="nickname left"></div>
+			<div class="exp left">
+				<span id="exp-tip"></span>
+				<div id="exp-bar" class="exp-loaded"></div>
+			</div>
+			<div class="level left">
+				<span>LV.</span><span id="level"></span>
+			</div>
+			<div class="golden left">
+				<span>￥</span><span id="money"></span>
+			</div>
+		</div>
+		<canvas class="clear-fixed" id="canvas" width="800" height="480"></canvas>
+		<div id="loading" class="loading">
+			<div class="top"></div>
+			<div id="load-tip" class="tip"></div>
+			<div class="loader">
+				<div id="load-bar" class="load-bar"></div>
+			</div>
+		</div>
+		<div class="footer tool clear-fixed">
+			<div class="tool-item seed left" title="种子"></div>
+			<div class="tool-item fertilizer left" title="施肥"></div>
+			<div class="tool-item kettle left" title="洒水"></div>
+			<div class="tool-item hand left" title="单个收取"></div>
+			<div class="tool-item hand-all left" title="收取全部"></div>
+			<div class="tool-item shovel left" title="铲除"></div>
+			<div class="tool-item levelUp left" title="升级土地"></div>
+			<div class="tool-item cursor left" title="无操作"></div>
+		</div>
+		<div id="toolbox" class="toolbox clear-fixed">
+			<div id="toolbox-content" class="toolbox-content">
+			</div>
+		</div>
+		<div id="close-toolbox" class="close-toolbox">×</div>
+		<div id="land-tip"></div>
+	</div>
+</body>
+<script src="js/config.js"></script>
+<script src="js/plant.js"></script>
+<script src="js/land.js"></script>
+<script src="js/game.js"></script>
+
+</html>

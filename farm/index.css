@@ -1,0 +1,234 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear-fixed:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	width: 800px;
+	height: 530px;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.container .header {
+	width: 100%;
+	height: 50px;
+	font-size: 20px;
+}
+
+.container .header .left {
+	margin-right: 20px;
+}
+
+.container .exp {
+	width: 200px;
+	border: 1px #bbada0 solid;
+	font-size: 12px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+}
+
+.container .exp .exp-loaded {
+	line-height: 28px;
+	background-color: #bbada080;
+	height: 28px;
+	position: relative;
+	top: -28px;
+}
+
+#canvas {
+	width: 100%;
+	height: 480px;
+	background-color: #bbada0;
+	border-radius: 10px;
+}
+
+.loading {
+	width: 800px;
+	height: 480px;
+	background: #fff url('images/bg.png') no-repeat;
+	background-size: 800px;
+	border: 1px solid #baad9f;
+	position: absolute;
+	top: 50px;
+}
+
+.loading .top {
+	width: 100%;
+	height: 400px;
+}
+
+.loading .tip {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.loading .loader {
+	width: 90%;
+	height: 20px;
+	border: 1px #baad9f solid;
+	border-radius: 10px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.loading .loader .load-bar {
+	height: 100%;
+	background-color: #96897b;
+}
+
+.container .footer, .container .toolbox {
+	width: 100%;
+	height: 60px;
+	background: #bbac9f;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.container .footer .tool-item {
+	width: 99px;
+	height: 100%;
+	text-align: center;
+	line-height: 60px;
+	cursor: pointer;
+	border-right: 1px #96897b solid;
+}
+
+.container .footer .tool-item:last-child {
+	border: none;
+}
+
+.tool-item.seed {
+	background: url('images/seed.png') no-repeat center;
+	background-size: 60px;
+}
+
+.tool-item.fertilizer {
+	background: url('images/fertilizer.png') no-repeat center;
+	background-size: 50px;
+}
+
+.tool-item.kettle {
+	background: url('images/kettle.png') no-repeat center;
+	background-size: 50px;
+}
+
+.tool-item.hand {
+	background: url('images/hand.png') no-repeat center;
+	background-size: 60px;
+}
+
+.tool-item.hand-all {
+	background: url('images/hand-all.png') no-repeat center;
+	background-size: 60px;
+}
+
+.tool-item.shovel {
+	background: url('images/shovel.png') no-repeat center;
+	background-size: 50px;
+}
+
+.tool-item.levelUp {
+	background: url('images/levelUp.png') no-repeat center;
+	background-size: 50px;
+}
+
+.tool-item.cursor {
+	background: url('images/cursor.png') no-repeat center;
+	background-size: 50px;
+}
+
+.container .toolbox {
+	display: none;
+	height: 115px;
+	position: relative;
+	top: -60px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.container .close-toolbox {
+	display: none;
+	position: relative;
+	top: -180px;
+	left: 795px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #baad9f;
+	background: #baad9f;
+	color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 18px;
+	cursor: pointer;
+}
+
+.container .toolbox .toolbox-content {
+	width: auto;
+	height: 100px;
+	white-space: nowrap;
+}
+
+.container .toolbox .toolbox-item {
+	display: inline-block;
+	height: 70px;
+	line-height: 70px;
+	cursor: pointer;
+	border-right: 1px #96897b solid;
+	padding: 15px;
+}
+
+.container .toolbox .toolbox-item .icon {
+	width: 70px;
+	height: 70px;
+}
+
+.container .toolbox .toolbox-item.active {
+	background-color: #eee3da;
+}
+
+.container .toolbox .toolbox-item.active .desc {
+	display: block;
+}
+
+.toolbox .toolbox-item .desc {
+	display: none;
+	width: 100px;
+	height: 70px;
+}
+
+.toolbox .toolbox-item .desc .desc-item {
+	width: 100px;
+	height: 17px;
+	line-height: 17px;
+}
+
+#land-tip {
+	display: none;
+	position: absolute;
+	background-color: #eee3dadb;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 10px;
+	color: #ff5722;
+	font-weight: 600;
+}
